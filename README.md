@@ -20,7 +20,5 @@
 
     • Uzraksti Eloquent ORM pieprasījumu modelim User, kur nepieciešams iegūt visus lietotājus kuriem reitings ir lielāks par 4. Lietotāju tabulas struktūra:
     public function index() {
-
-        return User::all()->where('rating', '>' 4);;
-
+    return response()->json(User::('rating', '>', 4)->get()));
     }
